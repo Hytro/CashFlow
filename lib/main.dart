@@ -38,7 +38,7 @@ class MyHomePage extends StatelessWidget {
           title: Text('Cash Flow'),
         ),
         body: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          //mainAxisAlignment: MainAxisAlignment.spaceAround,
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
             Container(
@@ -47,6 +47,30 @@ class MyHomePage extends StatelessWidget {
                 color: Colors.blue,
                 child: Text('Text test'),
                 elevation: 5,
+              ),
+            ),
+            Card(
+              child: Container(
+                padding: EdgeInsets.all(10),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.end,
+                  children: <Widget>[
+                    TextField(
+                      decoration: InputDecoration(labelText: 'Titel'),
+                    ),
+                    TextField(
+                      decoration: InputDecoration(labelText: 'Amount'),
+                    ),
+                    TextButton(
+                      style: ButtonStyle(
+                        foregroundColor:
+                            MaterialStateProperty.all(Colors.purple),
+                      ),
+                      child: Text('Add Transaction'),
+                      onPressed: () {},
+                    )
+                  ],
+                ),
               ),
             ),
             Column(
